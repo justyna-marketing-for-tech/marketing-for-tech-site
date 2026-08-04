@@ -146,13 +146,6 @@ section[id] {
   border-bottom: 1px solid var(--line);
 }
 
-.hero-mark {
-  position: absolute;
-  inset: auto 8% 4% auto;
-  width: 360px;
-  opacity: 0.2;
-}
-
 .hero-copy {
   position: relative;
   z-index: 1;
@@ -382,7 +375,43 @@ section[id] {
 }
 
 .service-card {
+  display: flex;
   min-height: 330px;
+  flex-direction: column;
+}
+
+.card-cta {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: auto;
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  padding: 11px 14px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1.25;
+  transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.card-cta span {
+  flex: 0 0 auto;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.card-cta:hover {
+  background: var(--blue);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+.card-cta:focus-visible {
+  outline: 3px solid var(--moss);
+  outline-offset: 3px;
 }
 
 .service-card h3,
@@ -614,6 +643,16 @@ section[id] {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.resource-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card .text-link {
+  margin-top: auto;
+  padding-top: 24px;
+}
+
 .resource-type {
   color: var(--green);
   font-size: 13px;
@@ -712,12 +751,6 @@ section[id] {
   .hero-section {
     min-height: 72vh;
     padding-top: 56px;
-  }
-
-  .hero-mark {
-    right: -36px;
-    bottom: 20px;
-    width: 240px;
   }
 
   .hero-lede,
